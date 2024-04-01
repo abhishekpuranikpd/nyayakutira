@@ -30,6 +30,9 @@ const NavBar = () => {
           <Link href="/services">
             <span className="cursor-pointer font-semibold text-white hover:text-yellow-200 dark:text-white">Services</span>
           </Link>
+          <Link href="/blog">
+            <span className="cursor-pointer font-semibold text-white hover:text-yellow-200 dark:text-white">Blogs</span>
+          </Link>
           <Link href="/contact">
             <span className="cursor-pointer font-semibold text-white hover:text-yellow-200 dark:text-white">Contact US</span>
           </Link>
@@ -57,7 +60,7 @@ const NavBar = () => {
         <div
           className={`${
             isOpen ? 'left-0' : '-left-full'
-          } fixed top-0 z-30 h-full w-1/2 bg-white transition-all duration-300 ease-in-out dark:bg-gray-800 md:hidden`}
+          } fixed top-0 z-30 h-full w-1/2  transition-all duration-300 ease-in-out  md:hidden`}
         >
           <div className="p-4">
             <h1 className='font-semibold text-yellow-200 '>Nyaya kutira</h1>
@@ -72,6 +75,11 @@ const NavBar = () => {
               <li>
                 <Link href="/about">
                   <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">About Us</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog">
+                  <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">Blogs</span>
                 </Link>
               </li>
               <li>

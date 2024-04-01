@@ -4,7 +4,7 @@ import Services from "./components/faci";
 import About from "./components/about";
 import NavBar from "./components/nav";
 import Footer from "../app/components/footer"
-
+import Dashboard from "../app/components/blog"
 
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+      {/* <Dashboard/> */}
       <Footer/>
 
       {/* <svg
