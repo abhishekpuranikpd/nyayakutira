@@ -21,7 +21,7 @@ export default function Services() {
             <h1 className="title-font mb-4 text-center text-5xl font-medium text-yellow-200 sm:text-3xl">
               Our Services
             </h1>
-            <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-yellow-200" />
+            <hr className="w-48 h-1 mx-auto my-4  border-0 rounded md:my-10 dark:bg-yellow-200" />
             <p className="mx-auto text-base leading-relaxed lg:w-3/4 xl:w-2/4"></p>
           </div>
           <div className="-mx-2 flex flex-wrap sm:mx-auto sm:mb-2 lg:w-4/5">

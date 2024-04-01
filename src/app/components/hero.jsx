@@ -39,7 +39,7 @@ const Hero = () => {
             <a href="#" className="text-sm font-semibold leading-6 text-white">Ask a Question <span aria-hidden="true">→</span></a>
           </div>
         </div>
-        <div className="mx-auto mt-30 flex max-w-2xl sm:mt-24 lg:ml-72 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+        <div className="mx-auto mt-30 flex max-w-2xl sm:mt-24 lg:ml-20 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-2xl lg:max-w-none">
             <Image src="/h1.png" alt="App screenshot" width="900" height="900" className="w-[20rem] rounded-md hover:translate-x-12" />
           </div>

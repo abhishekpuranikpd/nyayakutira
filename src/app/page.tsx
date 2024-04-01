@@ -1,12 +1,15 @@
 import Image from "next/image";
-import Hero from "./components/hero"
-import Services from "./components/faci"
+import Hero from "./components/hero";
+import Services from "./components/faci";
+import About from "./components/about";
 
 export default function Home() {
   return (
-  
-    <div className="bg-gray-900"><Hero/>
-    <Services/>
+    <div className="bg-gray-900">
+      <Hero />
+      <About />
+      <Services />
+
       {/* <svg
             viewBox="0 0 1024 1024"
             className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -20,7 +23,6 @@ export default function Home() {
               </radialGradient>
             </defs>
           </svg> */}
-    </div>    
-
+    </div>
   );
 }
