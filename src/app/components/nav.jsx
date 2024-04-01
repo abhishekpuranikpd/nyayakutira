@@ -62,7 +62,7 @@ const NavBar = () => {
             isOpen ? 'left-0' : '-left-full'
           } fixed top-0 z-30 h-full w-1/2  transition-all duration-300 ease-in-out  md:hidden`}
         >
-          <div className="p-4">
+          <div className="p-4 bg-black">
             <h1 className='font-semibold text-yellow-200 '>Nyaya kutira</h1>
             <hr className="w-auto h-1 mx-auto my-4  border-0 rounded md:my-10 dark:bg-yellow-200" />
             <ol className="flex flex-col space-y-4 pt-6 ">
