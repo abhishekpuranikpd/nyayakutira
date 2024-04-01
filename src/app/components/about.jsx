@@ -9,7 +9,7 @@ const About = () => {
          </div>
       <div className="mx-auto max-w-7xl px-6 pb-24  sm:pb-32 lg:flex lg:px-8">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
-          <Image className="h-11" src="/" alt="Your Company" width={1} height={1} />
+         
           
           <h1 className="mt-10 text-2xl font-bold text-center text-white sm:text-4xl">About us</h1>
           <hr className="w-48 h-1 mx-auto my-4  border-0 rounded md:my-10 dark:bg-yellow-200" />

@@ -2,13 +2,19 @@ import Image from "next/image";
 import Hero from "./components/hero";
 import Services from "./components/faci";
 import About from "./components/about";
+import NavBar from "./components/nav";
+import Footer from "../app/components/footer"
+
+
 
 export default function Home() {
   return (
     <div className="bg-gray-900">
+      <NavBar/>
       <Hero />
       <About />
       <Services />
+      <Footer/>
 
       {/* <svg
             viewBox="0 0 1024 1024"
