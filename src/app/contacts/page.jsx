@@ -20,7 +20,7 @@ const Contacts = async () => {
 
   return (
     <div className="min-h-screen bg-gray-200">
-      <div className="w-ful  bg-gray-900 p-2 ">
+      <div className="w-ful  bg-gray-900 pt-16 ">
         <ul>
           <a href="/profile">
             <li className="text-center text-white hover:bg-blue-500 border border-yellow-200 p-3">
@@ -50,28 +50,28 @@ const Contacts = async () => {
               </tr>
             </thead>
             <tbody>
-              {posts.map((post) => (
-                <tr key={post.id} className="border-t border-gray-800">
-                  <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
-                    {post.title}
-                  </td>
-                  <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
-                    {post.description.slice(0, 100)}
-                  </td>
-                  <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
-                    <a
-                      href={`tel:${post.category}`}
-                      className="text-blue-500 hover:underline"
-                    >
-                      {post.category}
-                    </a>
-                  </td>
-                  <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
-                    {" "}
-                    {new Date(post.createdAt).toLocaleString()}
-                  </td>
-                </tr>
-              ))}
+            {posts.slice().reverse().map((post) => (
+    <tr key={post.id} className="border-t border-gray-800">
+        <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
+            {post.title}
+        </td>
+        <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
+            {post.description.slice(0, 100)}
+        </td>
+        <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
+            <a
+                href={`tel:${post.category}`}
+                className="text-blue-500 hover:underline"
+            >
+                {post.category}
+            </a>
+        </td>
+        <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
+            {new Date(post.createdAt).toLocaleString()}
+        </td>
+    </tr>
+))}
+
             </tbody>
           </table>
         </div>
