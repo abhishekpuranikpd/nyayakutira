@@ -26,6 +26,13 @@ const ProfilePage = async () => {
 
   const { name, email, Post } = userData;
 
+  async function getposts() {
+    const data = await db.contact.findMany({
+    });
+    return data;
+  }
+  const posts = await getposts();
+
   return (
     <div className="bg-gray-700 min-h-screen">
       {/* <Navbar /> */}
@@ -42,6 +49,20 @@ const ProfilePage = async () => {
                 </h1>
                 <p className="text-gray-700 leading-relaxed mb-8">{email}</p>
               </div>
+              <div className='w-ful  bg-gray-900 m-7 rounded md border border-yellow-300'>
+              <div className='m-3'>
+    <ul className='flex'>
+        <a href="/" className='flex-1'>
+            <li className='text-center text-white hover:bg-blue-500 border border-yellow-200 p-3'>GO TO Main Website</li>
+        </a>
+        <a href="/contacts" className='flex-1'>
+            <li className='text-center text-white hover:bg-blue-500 border border-yellow-200 p-3'>Contacts | Messages</li>
+        </a>
+    </ul>
+</div>
+
+
+            </div>
               <div className="rounded-lg shadow-lg p-4">
                 <h2 className="text-2xl font-medium text-white mb-4">
                   Posts by You!!
@@ -69,6 +90,35 @@ const ProfilePage = async () => {
           </div>
         </div>
       </section>
+   
+    <div className=" min-h-screen">
+      
+  
+      <div className="container mx-auto">
+        {posts.map((post) => (
+          <section className="py-8" key={post.id}>
+            <div className="flex justify-center">
+              <div className="w-full max-w-2xl bg-white rounded-lg shadow-md p-8">
+                
+                <h1 className="text-3xl font-medium text-gray-900 mb-6">
+                  {post.title}
+                </h1>
+                <p className="text-gray-700 leading-relaxed mb-5">
+                  {post.description.slice(0, 100)}
+                </p>
+                <div className="flex justify-between items-center">
+<h2 className="text-indigo-500 text-xs font-medium tracking-widest mb-4">
+  {post.category}
+</h2>
+</div>
+                <br />
+                {/* <span className="text-gray-900">Author: {post.user.name}</span> */}
+              </div>
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
     </div>
   );
 };

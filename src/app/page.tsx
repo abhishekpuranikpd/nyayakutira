@@ -10,7 +10,7 @@ import Dashboard from "../app/components/blog"
 export default function Home() {
   return (
     <div className="bg-gray-900">
-      <NavBar/>
+    
       <Hero />
       <About />
       <Services />

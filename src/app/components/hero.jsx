@@ -22,7 +22,7 @@ const Hero = () => {
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
    
           <div className="mt-16 sm:mt-32 lg:mt-16">
-            <a href="#" className="inline-flex space-x-6">
+            <a href="/about" className="inline-flex space-x-6">
               <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-cyan-500 ring-1 ring-inset ring-indigo-500/20">Whats new</span>
               <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
                 <span>About us</span>
@@ -35,13 +35,13 @@ const Hero = () => {
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Empowering Legal Resilience</h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">Your Premier Choice for Legal Solutions in India</p>
           <div className="mt-10 flex items-center gap-x-6">
-            <a href="#" className="rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Talk to a Lawyer</a>
-            <a href="#" className="text-sm font-semibold leading-6 text-white">Ask a Question <span aria-hidden="true">→</span></a>
+            <a href={`tel:${+917676175601}`} className="rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Talk to a Lawyer</a>
+            <a href="/contact" className="text-sm font-semibold leading-6 text-white">Ask a Question <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div className="mx-auto mt-30 flex max-w-2xl sm:mt-24 lg:ml-20 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-2xl lg:max-w-none">
-            <Image src="/h1.png" alt="App screenshot" width="900" height="900" className="w-[20rem] rounded-md hover:translate-x-12" />
+            <Image src="/h1.png" alt="App screenshot" width="900" height="900" className="w-[20rem] rounded-md " />
           </div>
           {/* bg-white/5 shadow-2xl ring-1 ring-white/10 */}
         </div>

@@ -23,5 +23,5 @@ export async function POST(request){
     
 
     const post = await db.Contact.create({ data: {title,description,category}})
-    return NextResponse.json({result: "New blog Posted",success:true ,post},{status:200})
+    return NextResponse.json({result: "Success!!",success:true ,post},{status:200})
 }

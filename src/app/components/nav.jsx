@@ -90,7 +90,6 @@ const NavBar = () => {
              
             </ol>
           </div>
-          {/* <h1 className='pb-90 p-6 font-semibold'>❤️TechnoSthal</h1> */}
         </div>
       
       </div>
