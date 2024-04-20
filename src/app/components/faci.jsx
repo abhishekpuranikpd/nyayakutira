@@ -1,54 +1,46 @@
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Services() {
   const facilities = [
-    "Criminal LAW",
-    "Cyber Law",
-    "Family Law",
-    "Legal Opinion",
-    "Notary/ Affidavit Services",
-    "Providing of Surety",
-    "Assistance in Registration of Court Marriage",
-    "Legal advice/Opinion",
-    "Assistance in Police Station, ACP/DCP/ Commissioner Office",
+    { name: "Criminal LAW", imageUrl: "/1.jpg" },
+    { name: "Cyber Law", imageUrl: "/2.jpg" },
+    { name: "Family Law", imageUrl: "/3.jpg" },
+    { name: "Legal Opinion", imageUrl: "/4.jpg" },
+    { name: "Notary/ Affidavit Services", imageUrl: "/5.jpg" },
+    { name: "Providing of Surety", imageUrl: "/6.jpg" },
+    { name: "Assistance in Registration of Court Marriage", imageUrl: "/1.jpg" },
+    { name: "Legal advice/Opinion", imageUrl: "/8.jpg" },
+    { name: "Assistance in Police Station, ACP/DCP/ Commissioner Office", imageUrl: "/9.jpg" }
   ];
 
   return (
-    <>
-      <section className="body-font text-gray-600">
-        <div className="container mx-auto ">
-          <div className="mb-10 text-center">
-            <h1 className="title-font mb-4 text-center text-5xl font-medium text-yellow-200 sm:text-3xl">
-              Our Services
-            </h1>
-            <hr className="w-48 h-1 mx-auto my-4  border-0 rounded md:my-10 dark:bg-yellow-200" />
-            <p className="mx-auto text-base leading-relaxed lg:w-3/4 xl:w-2/4"></p>
+    <section className="body-font text-gray-600">
+      <div className="flex flex-col text-center w-full ">
+       <hr className="w-48 h-1 mx-auto my-4  border-0 rounded  dark:bg-yellow-200" />
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-yellow-200">
+         Services
+          </h1>
+          <hr className="w-48 h-1 mx-auto my-4  border-0 rounded dark:bg-yellow-200" />
           </div>
-          <div className="-mx-2 flex flex-wrap sm:mx-auto sm:mb-2 lg:w-4/5">
-            {facilities.map((facility, index) => (
-              <div key={index} className="w-full p-2 sm:w-1/2">
-                <div className="flex h-full items-center rounded bg-white p-4 shadow-md">
-                  <div className="rounded-full bg-indigo-500 p-3 mr-4">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="3"
-                      className="h-6 w-6 shrink-0 text-white"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                      <path d="M22 4L12 14.01l-3-3"></path>
-                    </svg>
-                  </div>
-                  <span className="title-font font-medium">{facility}</span>
-                </div>
-              </div>
-            ))}
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 p-10 md:p-20 gap-4">
+        {facilities.map((facility, index) => (
+          <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="relative">
+              <Image
+                src={facility.imageUrl}
+                alt={facility.name}
+                layout="responsive"
+                width={800}
+                height={600}
+                className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-48 xl:h-56"
+              />
+            </div>
+            <div className="p-4">
+              <h2 className="text-lg font-medium mb-2">{facility.name}</h2>
+            </div>
           </div>
-        </div>
-      </section>
-    </>
+        ))}
+      </div>
+    </section>
   );
 }
