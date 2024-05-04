@@ -18,9 +18,7 @@ async function getposts() {
 const Dashboard = async () => {
   const user = await getCurrentUser()
 
-  if (!user) {
-    redirect("/auth/login")
-  }
+
 
   const posts = await getposts();
 
