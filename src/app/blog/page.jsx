@@ -12,7 +12,7 @@ async function getposts() {
       user: true,
     },
   });
-  return data;
+  return data.reverse();
 }
 
 const Dashboard = async () => {
@@ -25,7 +25,7 @@ const Dashboard = async () => {
   const posts = await getposts();
 
   return (
-    <div>
+    <div className='space-y-10'>
       <NavBar/>
       
       <div className=" min-h-screen">
@@ -36,7 +36,7 @@ const Dashboard = async () => {
               <div className="flex justify-center">
                 <div className="w-full max-w-2xl bg-white rounded-lg shadow-md p-8">
                   
-                  <h1 className="text-3xl font-medium text-gray-900 mb-6">
+                  <h1 className="text-1xl font-bold text-black mb-6">
                     {post.title}
                   </h1>
                   <p className="text-gray-700 leading-relaxed mb-5">

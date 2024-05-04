@@ -14,12 +14,12 @@ const About = () => {
             About us
           </h1>
           <hr className="w-48 h-1 mx-auto my-4  border-0 rounded md:my-10 dark:bg-yellow-200" />
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <p className="mt-6 text-lg leading-8 items-start text-gray-300">
             Nyaya Kutira is started by Advocate Ramachandra Shenoy, who
             basically hails from Udupi District, Karnataka State. Who have vast
             experience in Criminal Law along with other fields of Law for more
             than decades. Nyaya Kutira is founded with intention to serve the
-            litigants with highest level pf professionalism and integrity and it
+            litigants with highest level of professionalism and integrity and it
             literally aims to help the litigants on priority basis by providing
             reliable and highly effective legal service with cost cutting
             method. “Nyaya- Justice & Kutira- House” it simply means, it is a

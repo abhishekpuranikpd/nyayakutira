@@ -17,17 +17,17 @@ const BlogView = async ({ params }) => {
     
     <div className="bg-gray-700 min-h-screen">
       {/* <Navbar/> */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="container mx-auto">
           <div className="flex justify-center">
-            <div className="w-full max-w-2xl bg-white rounded-lg shadow-md p-8">
+            <div className="w-full max-w-4xl bg-white rounded-lg shadow-md p-8">
               <h2 className="text-indigo-500 text-xs font-medium tracking-widest mb-4">
                 {data.category}
               </h2>
-              <h1 className="text-3xl font-medium text-gray-900 mb-6">
+              <h1 className="text-2xl font-bold text-black mb-6">
                 {data.title}
               </h1>
-              <p className="text-gray-700 leading-relaxed mb-8">
+              <p className="text-black justify-between items-center fontthin leading-relaxed mb-8">
                 {data.description}
               </p>
             

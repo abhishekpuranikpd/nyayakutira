@@ -8,7 +8,7 @@ export default function Services() {
     { name: "Legal Opinion", imageUrl: "/4.jpg" },
     { name: "Notary/ Affidavit Services", imageUrl: "/5.jpg" },
     { name: "Providing of Surety", imageUrl: "/6.jpg" },
-    { name: "Assistance in Registration of Court Marriage", imageUrl: "/1.jpg" },
+    { name: "Assistance in Registration of Court Marriage", imageUrl: "/m1.jpg" },
     { name: "Legal advice/Opinion", imageUrl: "/8.jpg" },
     { name: "Assistance in Police Station, ACP/DCP/ Commissioner Office", imageUrl: "/9.jpg" }
   ];
@@ -24,7 +24,7 @@ export default function Services() {
           </div>
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 p-10 md:p-20 gap-4">
         {facilities.map((facility, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:bg-yellow-300">
             <div className="relative">
               <Image
                 src={facility.imageUrl}
@@ -32,11 +32,11 @@ export default function Services() {
                 layout="responsive"
                 width={800}
                 height={600}
-                className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-48 xl:h-56"
+                className="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-48 xl:h-56 "
               />
             </div>
             <div className="p-4">
-              <h2 className="text-lg font-medium mb-2">{facility.name}</h2>
+              <h2 className="text-lg font-semibold mb-2 text-center">{facility.name}</h2>
             </div>
           </div>
         ))}

@@ -34,13 +34,13 @@ const Footer = () => {
                   ADDRESS
                 </h2>
                 <p className="mt-1 text-black">
-                  Bengaluru #13/1, SN Lane, Lal Bagh Upparahalli,
-                  <br />
-                  Bengaluru-560004.
-                  <br />
-                  NYAYA KUTIRA Cabin No. 8, 104, Mallappa Tower, East Park Road,
-                  Malleshwaram, 8th Cross Road,Bengaluru, Karnataka-560003
+                  NYAYA KUTIRA Cabin No. 8, No.104, Mallappa Tower, East Park
+                  Road, Malleshwaram, 8th Cross Road,Bengaluru,
+                  Karnataka-560003.     <hr className="h-3 w-48 mx-auto text-yellow-600" />
+                  <p>No.#13/1, SN Lane, Lal Bagh Upparahalli,Bengaluru-560004.</p>
                 </p>
+           
+              
               </div>
               <div className="lg:w-1 /2 px-6 mt-4 lg:mt-0">
                 <h2 className="title-font font-semibold text-black tracking-widest text-xs">
@@ -59,8 +59,8 @@ const Footer = () => {
                     <PhoneCall />
                   </span>
                 </h2>
-                <p className="leading-relaxed text-black">.
-                For Payment:
+                <p className="leading-relaxed text-black">
+                  . For Payment:
                   <a
                     href={`tel:${+917676175601}`}
                     className="text-blue-500 hover:underline"
