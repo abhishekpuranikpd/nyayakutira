@@ -4,23 +4,27 @@ import Link from "next/link";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isHover, setIsHover] = useState(false);
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="fixed start-0 top-0 z-20 w-full mb-10 bg-gray-900 ">
-      <div className=" mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
+    <nav className="fixed start-0 top-0 z-20 w-full mb-10 bg-gray-900">
+      <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <Link href="/">
-          <span className="flex cursor-pointer items-center rtl:space-x-reverse">
-            <span className="self-center whitespace-nowrap text-2xl font-semibold text-yellow-200">
-              Nyaya Kutira
+          <span
+            className="flex cursor-pointer items-center rtl:space-x-reverse"
+            onMouseEnter={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
+          >
+            <span className="self-center text-2xl font-semibold text-yellow-200">
+              {isHover ? "ನ್ಯಾಯ ಕುಟೀರ" : "Nyaya Kutira"}
             </span>
           </span>
         </Link>
         <div className="hidden space-x-6 rtl:space-x-reverse md:order-2 md:flex md:space-x-6">
-          {/* Add other navigation links for medium and larger screens */}
           <Link href="/">
             <span className="cursor-pointer font-semibold text-white hover:text-yellow-200 dark:text-white">
               Home
@@ -28,7 +32,7 @@ const NavBar = () => {
           </Link>
           <Link href="/about">
             <span className="cursor-pointer font-semibold text-white hover:text-yellow-200 dark:text-white">
-              About US
+              About Us
             </span>
           </Link>
           <Link href="/services">
@@ -43,17 +47,17 @@ const NavBar = () => {
           </Link>
           <Link href="/contact">
             <span className="cursor-pointer font-semibold text-white hover:text-yellow-200 dark:text-white">
-              Contact US
+              Contact Us
             </span>
           </Link>
-          <Link href={`tel:${+917676175601}`}>
-            <span className="cursor-pointer rounded-lg border  p-4 font-semibold text-white hover:text-yellow-200 dark:text-white">
-              Talk to a lawyer
+          <Link href={`tel:+917676175601`}>
+            <span className="cursor-pointer rounded-lg border p-4 font-semibold text-white hover:text-yellow-200 dark:text-white">
+              Talk to a lawyer/ವಕೀಲರೊಂದಿಗೆ ಮಾತನಾಡಿ
             </span>
           </Link>
           <Link href="/contact">
-            <span className="cursor-pointer rounded-lg border  p-4 font-semibold text-white hover:text-yellow-200 dark:text-white">
-              Ask a question
+            <span className="cursor-pointer rounded-lg border p-4 font-semibold text-white hover:text-yellow-200 dark:text-white">
+              Ask a question/ ಪ್ರಶ್ನೆ ಕೇಳಿ
             </span>
           </Link>
         </div>
@@ -81,13 +85,38 @@ const NavBar = () => {
         <div
           className={`${
             isOpen ? "left-0" : "-left-full"
-          } fixed top-0  h-full   transition-all duration-300 ease-in-out  md:hidden`}
+          } fixed top-0 h-full transition-all duration-300 ease-in-out md:hidden`}
         >
-          <div className="p-4 bg-black h-full">
-            <h1 className="font-semibold text-yellow-200 ">Nyaya kutira</h1>
-            <hr className="w-auto h-1 mx-auto my-4  border-0 rounded md:my-10 dark:bg-yellow-200" />
-            <ol className="flex flex-col space-y-4 pt-6 ">
-              {/* Render menu items in the drawer for small screens */}
+          <div className="p-4 bg-black h-full relative">
+            <button
+              onClick={toggleDrawer}
+              className="absolute top-4 right-4 p-2 focus:outline-none"
+            >
+              <svg
+                className="h-6 w-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <h1
+              className="font-semibold text-yellow-200"
+              onMouseEnter={() => setIsHover(true)}
+              onMouseLeave={() => setIsHover(false)}
+            >
+              {" "}
+              {isHover ? "ನ್ಯಾಯ ಕುಟೀರ" : "Nyaya Kutira"}
+            </h1>
+            <hr className="w-auto h-1 mx-auto my-4 border-0 rounded md:my-10 dark:bg-yellow-200" />
+            <ol className="flex flex-col space-y-4 pt-6">
               <li>
                 <Link href="/">
                   <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">
@@ -99,6 +128,13 @@ const NavBar = () => {
                 <Link href="/about">
                   <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">
                     About Us
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services">
+                  <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">
+                    Services
                   </span>
                 </Link>
               </li>
@@ -116,20 +152,19 @@ const NavBar = () => {
                   </span>
                 </Link>
               </li>
-             
+              <li>
+                <Link href={`tel:+917676175601`}>
+                  <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">
+                    Talk to a lawyer
+                  </span>
+                </Link>
+              </li>
               <li>
                 <Link href="/contact">
                   <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">
                     Ask a question
                   </span>
                 </Link>
-                <li>
-                <Link href={`tel:${+917676175601}`}>
-                  <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">
-                    Talk to a lawyer
-                  </span>
-                </Link>
-              </li>{" "}
               </li>
             </ol>
           </div>

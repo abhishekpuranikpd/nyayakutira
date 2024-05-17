@@ -12,7 +12,7 @@ const FooterBar = () => {
                 <div className="justify-between items-center">
                     <div>
                         <p className="text-sm">&copy; {new Date().getFullYear()} Nyaya Kutira. All rights reserved.</p>
-                        <p className="text-sm">Developed By TechnoSS</p>
+                        <p className="text-sm">Developed By TechnoSthala</p>
                     </div>
                    
                 </div>
