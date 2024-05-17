@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Talk from "../components/talkto";
 import Link from "next/link";
 
 const NavBar = () => {
@@ -24,7 +25,7 @@ const NavBar = () => {
             </span>
           </span>
         </Link>
-        <div className="hidden space-x-6 rtl:space-x-reverse md:order-2 md:flex md:space-x-6">
+        <div className="hidden md:flex space-x-6 rtl:space-x-reverse md:order-2">
           <Link href="/">
             <span className="cursor-pointer font-semibold text-white hover:text-yellow-200 dark:text-white">
               Home
@@ -50,16 +51,12 @@ const NavBar = () => {
               Contact Us
             </span>
           </Link>
-          <Link href={`tel:+917676175601`}>
-            <span className="cursor-pointer rounded-lg border p-4 font-semibold text-white hover:text-yellow-200 dark:text-white">
-              Talk to a lawyer/ವಕೀಲರೊಂದಿಗೆ ಮಾತನಾಡಿ
-            </span>
-          </Link>
           <Link href="/contact">
             <span className="cursor-pointer rounded-lg border p-4 font-semibold text-white hover:text-yellow-200 dark:text-white">
               Ask a question/ ಪ್ರಶ್ನೆ ಕೇಳಿ
             </span>
           </Link>
+          <Talk />
         </div>
         <div className="flex space-x-3 rtl:space-x-reverse md:order-2 md:hidden md:space-x-0">
           <button
@@ -87,7 +84,7 @@ const NavBar = () => {
             isOpen ? "left-0" : "-left-full"
           } fixed top-0 h-full transition-all duration-300 ease-in-out md:hidden`}
         >
-          <div className="p-4 bg-black h-full relative">
+          <div className="p-4 bg-black h-full w-2/3 relative">
             <button
               onClick={toggleDrawer}
               className="absolute top-4 right-4 p-2 focus:outline-none"
@@ -112,7 +109,6 @@ const NavBar = () => {
               onMouseEnter={() => setIsHover(true)}
               onMouseLeave={() => setIsHover(false)}
             >
-              {" "}
               {isHover ? "ನ್ಯಾಯ ಕುಟೀರ" : "Nyaya Kutira"}
             </h1>
             <hr className="w-auto h-1 mx-auto my-4 border-0 rounded md:my-10 dark:bg-yellow-200" />
@@ -153,19 +149,16 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
-                <Link href={`tel:+917676175601`}>
-                  <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">
-                    Talk to a lawyer
-                  </span>
-                </Link>
-              </li>
-              <li>
                 <Link href="/contact">
                   <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">
                     Ask a question
                   </span>
                 </Link>
               </li>
+              <li>
+                <Talk/>
+              </li>
+             
             </ol>
           </div>
         </div>
