@@ -18,7 +18,8 @@ const Talk = () => {
         className="cursor-pointer rounded-lg border p-2 font-semibold text-white hover:text-yellow-200 dark:text-white"
         onClick={handleButtonClick}
       >
-        Talk to a lawyer/ವಕೀಲರೊಂದಿಗೆ ಮಾತನಾಡಿ
+        Talk to a lawyer <br />
+        (ವಕೀಲರೊಂದಿಗೆ ಮಾತನಾಡಿ)
       </button>
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">

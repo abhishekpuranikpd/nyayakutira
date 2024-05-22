@@ -30,20 +30,21 @@ const Footer = () => {
             ></iframe>
             <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md ">
               <div className="lg:w-1/2 px-6">
-                <h2 className="title-font font-semibold text-black tracking-widest text-xs">
+                <h2 className="title-font font-semibold text-black  text-xs">
                   ADDRESS
                 </h2>
                 <p className="mt-1 text-black">
                   NYAYA KUTIRA Cabin No. 8, No.104, Mallappa Tower, East Park
                   Road, Malleshwaram, 8th Cross Road,Bengaluru,
-                  Karnataka-560003.     <hr className="h-3 w-48 mx-auto text-yellow-600" />
-                  <p>No.#13/1, SN Lane, Lal Bagh Upparahalli,Bengaluru-560004.</p>
+                  Karnataka-560003.{" "}
+                  <h2>_____________</h2>
+                  <p>
+                    No.#13/1, SN Lane, Lal Bagh Upparahalli,Bengaluru-560004.
+                  </p>
                 </p>
-           
-              
               </div>
               <div className="lg:w-1 /2 px-6 mt-4 lg:mt-0">
-                <h2 className="title-font font-semibold text-black tracking-widest text-xs">
+                <h2 className="title-font font-semibold text-black text-xs">
                   EMAIL
                 </h2>
 
@@ -53,30 +54,20 @@ const Footer = () => {
                 >
                   nyayakutira@gmail.com
                 </a>
-                <h2 className="title-font font-semibold text-black tracking-widest text-xs mt-4">
-                  <span>
-                    {" "}
+                <div className="flex items-center mt-4 space-x-2">
+                  <h2 className="title-font font-semibold text-black  text-xs">
                     <PhoneCall />
-                  </span>
-                </h2>
-                <p className="leading-relaxed text-black">
-                  . For Payment:
-                  <a
-                    href={`tel:${+917676175601}`}
-                    className="text-blue-500 hover:underline"
-                  >
-                    +917676175601{" "}
-                  </a>
-                </p>
-                <p className="leading-relaxed text-black">
-                  Call Us:
-                  <a
-                    href={`tel:+918970435050}`}
-                    className="text-blue-500 hover:underline"
-                  >
-                    +918970435050{" "}
-                  </a>
-                </p>
+                  </h2>
+                  <p className="text-black items-center">
+                  
+                    <a
+                      href="tel:+918970435050"
+                      className="text-blue-500 hover:underline ml-1"
+                    >
+                      +918970435050
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

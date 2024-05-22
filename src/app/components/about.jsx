@@ -50,7 +50,7 @@ const About = () => {
               href="/contact"
               className="text-sm font-semibold leading-6 text-white"
             >
-              Ask a question/ ಪ್ರಶ್ನೆ ಕೇಳಿ <span aria-hidden="true">→</span>
+              Ask a question (ಪ್ರಶ್ನೆಯನ್ನು ಕೇಳಿ) <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>

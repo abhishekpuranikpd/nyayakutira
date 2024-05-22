@@ -22,7 +22,7 @@ export default function Services() {
       name: "Family Law",
       imageUrl: "/3.jpg",
       description:
-        "In India family disputes are considered as personal by the clients  and some of the clients are not comfort with sharing their family problems with any one sometime with  their Advocates.",
+        "In India family disputes are considered as personal by the clients  and some of the clients are not comfort with sharing their family problems with any one sometime with  their Advocates. We have vast experience representing clients in and out of  Bengaluru in a broad range of family law matters. Our team will help you make smart decisions and guide you every step of the way by using our experience.",
     },
     {
       name: "Legal Opinion",
@@ -95,7 +95,7 @@ export default function Services() {
                 className="mt-2 px-4 py-2 bg-yellow-200 text-black rounded hover:bg-yellow-300"
                 onClick={() => handleServiceClick(facility)}
               >
-                Learn More
+                Know More
               </button>
             </div>
           </div>
