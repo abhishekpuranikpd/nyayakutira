@@ -36,7 +36,19 @@ const Hero = () => {
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Empowering Legal Resilience</h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">Your Premier Choice for Legal Solutions in India</p>
           <div className="mt-10 flex items-center gap-x-6">
-<Talk/>   <a href="/contact" className="text-sm font-semibold leading-6 text-white">Ask a Question (ಪ್ರಶ್ನೆಯನ್ನು ಕೇಳಿ) <span aria-hidden="true">→</span></a>
+            <a
+              href={`/talk`}
+              className="rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+            >
+             Talk to a lawyer <br/> ( ವಕೀಲರೊಂದಿಗೆ ಮಾತನಾಡಿ)
+            </a>
+         
+            <a
+              href="/contact"
+              className="text-sm font-semibold leading-6 text-white"
+            >
+              Ask a question (ಪ್ರಶ್ನೆಯನ್ನು ಕೇಳಿ) <span aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
         <div className="mx-auto mt-30 flex max-w-2xl sm:mt-24 lg:ml-20 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">

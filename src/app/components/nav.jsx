@@ -53,7 +53,7 @@ const NavBar = () => {
           </Link>
           {/* <Link href="/contact">
             <span className="cursor-pointer rounded-lg border p-4 font-semibold text-white hover:text-yellow-200 dark:text-white">
-              Ask a question (ಪ್ರಶ್ನೆಯನ್ನು ಕೇಳಿ)
+              Ask a question/ ಪ್ರಶ್ನೆಯನ್ನು ಕೇಳಿ
             </span>
           </Link>
           <Talk /> */}
@@ -156,8 +156,13 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
-                <Talk/>
+              <Link href="/talk">
+              <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">
+              Talk to a Lawyer
+              </span>
+              </Link>
               </li>
+          
              
             </ol>
           </div>

@@ -26,15 +26,19 @@ const Talk = () => {
 
   return (
     <>
-      <button
-        className="cursor-pointer rounded-lg border p-2 font-semibold text-white hover:text-yellow-200 dark:text-white"
-        onClick={handleButtonClick}
-      >
-        Talk to a lawyer <br />
-        (ವಕೀಲರೊಂದಿಗೆ ಮಾತನಾಡಿ)
-      </button>
+      <div className="mt-[50px] fixed inset-0 bg-black flex flex-col justify-center items-center z-10">
+        <button
+          className="cursor-pointer rounded-lg border p-2 font-semibold text-white hover:text-yellow-200 dark:text-white"
+          onClick={handleButtonClick}
+        >
+          Payment
+        </button>
+        <h2 className="text-2xl text-white font-bold mb-4">Talk to a Lawyer</h2>
+        <p className="mb-4 text-white">After the payment Please call us at +917676175601 to speak with a lawyer.</p>
+      </div>
+
       {isModalOpen && (
-        <div className="mt-[50px] fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="relative bg-white p-6 rounded-lg shadow-lg max-w-lg w-full overflow-hidden">
             <button
               className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
@@ -58,8 +62,11 @@ const Talk = () => {
             <h2 className="text-2xl font-bold mb-4">Talk to a Lawyer</h2>
             <p className="mb-4">Please call us at +917676175601 to speak with a lawyer.</p>
             <div className="overflow-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
+              {/* Add your image or other content here */}
+              <div className="overflow-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
               <Image src="/payment.jpg" alt="" width={400} height={400} />
             </div>
+            </div> 
           </div>
         </div>
       )}

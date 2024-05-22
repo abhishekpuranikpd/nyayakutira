@@ -25,7 +25,7 @@ const Talk = () => {
   };
 
   return (
-    <>
+    <><div className="bg-white ">
       <button
         className="cursor-pointer rounded-lg border p-2 font-semibold text-white hover:text-yellow-200 dark:text-white"
         onClick={handleButtonClick}
@@ -33,6 +33,7 @@ const Talk = () => {
         Talk to a lawyer <br />
         (ವಕೀಲರೊಂದಿಗೆ ಮಾತನಾಡಿ)
       </button>
+      </div>
       {isModalOpen && (
         <div className="mt-[50px] fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="relative bg-white p-6 rounded-lg shadow-lg max-w-lg w-full overflow-hidden">
@@ -56,7 +57,7 @@ const Talk = () => {
               </svg>
             </button>
             <h2 className="text-2xl font-bold mb-4">Talk to a Lawyer</h2>
-            <p className="mb-4">Please call us at +917676175601 to speak with a lawyer.</p>
+            <p className="mb-4">After Making the payment  call us at +917676175601 to speak with a lawyer.</p>
             <div className="overflow-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
               <Image src="/payment.jpg" alt="" width={400} height={400} />
             </div>
