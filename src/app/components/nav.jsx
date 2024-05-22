@@ -51,12 +51,12 @@ const NavBar = () => {
               Contact Us
             </span>
           </Link>
-          <Link href="/contact">
+          {/* <Link href="/contact">
             <span className="cursor-pointer rounded-lg border p-4 font-semibold text-white hover:text-yellow-200 dark:text-white">
               Ask a question/ ಪ್ರಶ್ನೆ ಕೇಳಿ
             </span>
           </Link>
-          <Talk />
+          <Talk /> */}
         </div>
         <div className="flex space-x-3 rtl:space-x-reverse md:order-2 md:hidden md:space-x-0">
           <button

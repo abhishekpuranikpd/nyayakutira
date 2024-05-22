@@ -1,6 +1,7 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import JoditEditor from 'jodit-react';
 
 
 
@@ -10,6 +11,7 @@ const EditpageForm = ({data}) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
+  const editor = useRef(null);
 
   
 
@@ -47,8 +49,8 @@ const EditpageForm = ({data}) => {
   };
 
   return (
-    <div className="flex justify-center bg-gray-700 items-center h-screen">
-      <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
+    <div className="flex justify-center bg-gray-700 items-center">
+      <div className="w-full mx-w-md bg-white rounded-lg shadow-md p-8">
         <h1 className="text-3xl font-medium text-black mb-6">Update Post</h1>
         <form  className="space-y-6" onSubmit={handleSubmit}>
           <div>
@@ -68,14 +70,12 @@ const EditpageForm = ({data}) => {
             <label htmlFor="description" className="block mb-2 text-sm font-bold">
               Description
             </label>
-            <textarea
-              id="description"
-              rows="4"
+            <JoditEditor
+              ref={editor}
               value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              className="w-full p-2.5 border rounded-lg"
-              placeholder="Write your Description here..."
-            ></textarea>
+              onChange={(newContent) => setDescription(newContent)}
+              className="h-[400px]"
+            />
           </div>
           <div>
             <label htmlFor="category" className="block mb-2 text-sm font-bold">

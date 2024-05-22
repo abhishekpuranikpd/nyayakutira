@@ -74,7 +74,7 @@ const ProfilePage = async () => {
                     <h3 className="text-xl font-medium text-gray-900 mb-2">
                       {post.title}
                     </h3>
-                    <p className="text-gray-700">{post.description}</p>
+                    <p className="text-gray-700" dangerouslySetInnerHTML={{__html:post.description.slice(0,300)}}></p>
                     <div className="absolute top-2 right-16 space-x-2">
                      <Link href={`/blog/${post.id}/edit`} ><button className="border border-blue-500 text-blue-500 px-3 py-1 rounded">
                         Edit

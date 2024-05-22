@@ -27,9 +27,10 @@ const BlogView = async ({ params }) => {
               <h1 className="text-2xl font-bold text-black mb-6">
                 {data.title}
               </h1>
-              <p className="text-black justify-between items-center fontthin leading-relaxed mb-8">
-                {data.description}
-              </p>
+              <div
+                className="text-black justify-between items-center font-thin leading-relaxed mb-8"
+                dangerouslySetInnerHTML={{ __html: data.description }}
+              ></div>
             
               <div className="text-gray-900">
                 Author: {data.user.name}
