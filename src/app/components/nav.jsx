@@ -149,7 +149,7 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
+                <Link href="/ask">
                   <span className="cursor-pointer text-white hover:text-yellow-200 dark:text-white">
                     Ask a question
                   </span>

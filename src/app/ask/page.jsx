@@ -1,4 +1,5 @@
 "use client";
+import ContactForm from "@/components/contactform";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -26,15 +27,17 @@ const Talk = () => {
 
   return (
     <>
-      <div className="mt-[50px] fixed inset-0 bg-black flex flex-col justify-center items-center z-10">
+      <div className=" fixed inset-0 bg-black flex flex-col justify-center items-center overflow-auto z-10">
         <button
-          className="cursor-pointer rounded-lg border p-2 font-semibold text-white hover:text-yellow-200 dark:text-white"
+          className="cursor-pointer mt-[150px] rounded-lg border p-2 font-semibold text-white hover:text-yellow-200 dark:text-white"
           onClick={handleButtonClick}
         >
-          Payment
+         For Payment Click Here
         </button>
-        <h2 className="text-2xl text-white font-bold mb-4">Talk to a Lawyer</h2>
-        <p className="mb-4 text-white">After the payment of Rs.500/- (up to 30min) Please call us at +917676175601 to speak with a lawyer.</p>
+        <br/>
+        <h2 className="text-2xl text-white font-bold mb-4">Ask A Question</h2>
+        <p className="mb-4 text-white text-center">After the payment of Rs.250/- Ask Your Questions (Upto 3 Question)</p>
+        <ContactForm/>
       </div>
 
       {isModalOpen && (
@@ -59,12 +62,14 @@ const Talk = () => {
                 />
               </svg>
             </button>
-            <h2 className="text-2xl font-bold mb-4">Talk to a Lawyer</h2>
-            <p className="mb-4">Please call us at +917676175601 to speak with a lawyer.</p>
+            <h2 className="text-2xl font-bold mb-4">Ask A Questionr</h2>
+            <p className="mb-4">After the payment of Rs.250/- Ask Your Questions (Upto 3 Question)</p>
             <div className="overflow-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
               {/* Add your image or other content here */}
               <div className="overflow-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
               <Image src="/payment.jpg" alt="" width={400} height={400} />
+
+              <ContactForm/>
             </div>
             </div> 
           </div>

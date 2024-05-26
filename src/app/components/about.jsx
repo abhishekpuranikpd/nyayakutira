@@ -47,7 +47,7 @@ const About = () => {
             </a>
          
             <a
-              href="/contact"
+              href="/ask"
               className="text-sm font-semibold leading-6 text-white"
             >
               Ask a question (ಪ್ರಶ್ನೆಯನ್ನು ಕೇಳಿ) <span aria-hidden="true">→</span>

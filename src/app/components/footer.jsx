@@ -17,8 +17,8 @@ const Footer = () => {
             time in their life.
           </p>
         </div>
-        <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
-          <div className="lg:w-2/3 md:w-2/3 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        <div className="container px-5 py-10 mx-auto ">
+          <div className=" bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5653406816045!2d77.56806107484181!3d12.999629387318334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16257f41027d%3A0xe61cd92e4399faab!2sMallappa%20Towers!5e0!3m2!1sen!2sin!4v1712032160831!5m2!1sen!2sin"
               width="100%"
@@ -26,7 +26,7 @@ const Footer = () => {
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              className="absolute inset-0"
+              className="absolute inset-0 h-[1000px]"
             ></iframe>
             <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md ">
               <div className="lg:w-1/2 px-6">
@@ -34,7 +34,8 @@ const Footer = () => {
                   ADDRESS
                 </h2>
                 <p className="mt-1 text-black">
-                  NYAYA KUTIRA Cabin No. 8, No.104, Mallappa Tower, East Park
+                  NYAYA KUTIRA
+                  <br/> Cabin No. 8, No.104, Mallappa Tower, East Park
                   Road, Malleshwaram, 8th Cross Road,Bengaluru,
                   Karnataka-560003.{" "}
                   <h2>_____________</h2>
@@ -71,10 +72,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-            <ContactForm />
-            <p className="text-xs text-gray-500 mt-3"></p>
-          </div>
+        
         </div>
       </section>
     </>
