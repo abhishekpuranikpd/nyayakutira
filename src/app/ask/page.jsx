@@ -66,7 +66,7 @@ const Talk = () => {
                 />
               </svg>
             </button>
-            <h2 className="text-2xl font-bold mb-4">Ask A Questionr</h2>
+            <h2 className="text-2xl font-bold mb-4">Ask A Question</h2>
             <p className="mb-4">After the payment of Rs.250/- Ask Your Questions (Upto 3 Question)</p>
             <div className="overflow-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
               {/* Add your image or other content here */}
