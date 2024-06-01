@@ -27,7 +27,7 @@ const Talk = () => {
 
   return (
     <>
-      <div className=" fixed inset-0 bg-black flex flex-col justify-center items-center overflow-auto z-10">
+      <div className=" bg-black flex flex-col justify-center mt-[60px] items-center overflow-auto ">
         <button
           className="cursor-pointer mt-[150px] rounded-lg border p-2 font-semibold text-white hover:text-yellow-200 dark:text-white"
           onClick={handleButtonClick}
@@ -37,8 +37,12 @@ const Talk = () => {
         <br/>
         <h2 className="text-2xl text-white font-bold mb-4">Ask A Question</h2>
         <p className="mb-4 text-white text-center">After the payment of Rs.250/- Ask Your Questions (Upto 3 Question)</p>
-        <ContactForm/>
+     
       </div>
+      <div className="p-2 bg-black">
+      <ContactForm/>
+      </div>
+    
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">

@@ -27,8 +27,8 @@ const ContactForm = () => {
   
     return (
       <div className="flex justify-center  items-center">
-        <div className="w-full max-w-md  rounded-lg shadow-md ">
-          <h1 className="text-3xl font-medium text-yellow mb-6">Ask Us</h1>
+        <div className="w-full max-w-2xl  rounded-lg shadow-md ">
+          <h1 className="text-3xl font-medium text-yellow mb-6"></h1>
           <form
             noValidate
             action=""
@@ -49,12 +49,10 @@ const ContactForm = () => {
               />
             </div>
             <div>
-              <label htmlFor="description" className="block mb-2 text-sm font-bold">
-                Ask anything
-              </label>
+         
               <textarea
                 id="description"
-                rows="4"
+                rows="25"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 className="w-full p-2.5 border text-black rounded-lg"
