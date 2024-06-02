@@ -9,7 +9,7 @@ export default async function AuthLayout({ children }) {
   const user = await getCurrentUser()
 
   if (user) {
-    redirect("/blog")
+    redirect("/profile")
   }
  
   return (
