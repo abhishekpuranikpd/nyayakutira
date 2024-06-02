@@ -90,7 +90,7 @@ export default function Services() {
               />
             </div>
             <div className="p-4 text-center">
-              <h2 className="text-lg font-semibold mb-2">{facility.name}</h2>
+              <h2 className="text-lg font-semibold mb-2">{facility.name.toUpperCase()}</h2>
               <button
                 className="mt-2 px-4 py-2 bg-yellow-200 text-black rounded hover:bg-yellow-300"
                 onClick={() => handleServiceClick(facility)}
