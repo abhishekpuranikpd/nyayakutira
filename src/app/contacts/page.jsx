@@ -56,7 +56,7 @@ const Contacts = async () => {
             {post.title}
         </td>
         <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
-            {post.description.slice(0, 100)}
+            {post.description}
         </td>
         <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
             <a
