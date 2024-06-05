@@ -67,7 +67,7 @@ const Contacts = async () => {
             </a>
         </td>
         <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
-            {new Date(post.createdAt).toLocaleString()}
+            {(post.createdAt).toLocaleDateString()},{(post.createdAt).toLocaleTimeString()}
         </td>
     </tr>
 ))}

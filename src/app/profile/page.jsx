@@ -60,6 +60,14 @@ const ProfilePage = async () => {
         </a>
     </ul>
 </div>
+<div className='m-3'>
+    <ul className='flex'>
+        <a href="/blog/new" className='flex-1'>
+            <li className='text-center text-white hover:bg-blue-500 border border-yellow-200 p-3'>Create a Blog</li>
+        </a>
+        
+    </ul>
+</div>
 
 
             </div>
