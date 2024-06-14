@@ -55,7 +55,7 @@ const Messages = ({posts}) => {
             </a>
         </td>
         <td className="px-6 py-4 whitespace-no-wrap border border-gray-800">
-            {(post.createdAt).toLocaleDateString()},{(post.createdAt).toLocaleTimeString()}
+            {(post.createdAt).toLocaleDateString('en-GB')},{(post.createdAt).toLocaleTimeString()}
         </td>
     </tr>
 ))}
